@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+.banner img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.page-content p{
+	font-size: 14px;
+	line-height: 26px;
+	text-align: justify;
+	padding-bottom: 15px;
+}
+.banner img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.soundlist{
+	margin-bottom: 15px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 6px 4px;
+	float: left;
+}
+
+.soundlist .mui-icon{
+	font-size: 26px;
+	padding: 0 6px;
+	color: #2f9afe;
+}
+.soundlist .mui-icon font{
+	font-size: 14px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 6px;
+    color: #979797;
+}
+.clear{
+	clear: both;
+	height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

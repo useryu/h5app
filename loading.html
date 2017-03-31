@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <style>
+    	.loading{
+    		vertical-align: middle;
+    		font-size: 16px;
+    		text-align: center;
+    		position: absolute;
+    		width: 100%;
+    		top: 50%;
+    		margin-top: -60px;
+    	}
+    	.mui-icon{
+    		font-size: 18px;
+    		margin-right: 6px;
+    		-webkit-transform: rotate(360deg);
+			animation: rotation 3s linear infinite;
+			-moz-animation: rotation 3s linear infinite;
+			-webkit-animation: rotation 3s linear infinite;
+			-o-animation: rotation 3s linear infinite;
+    	}
+    	@-webkit-keyframes rotation{
+			from {-webkit-transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);}
+		}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		swipeBack:true
+      	});
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">		
+		<p class="loading"><span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>加载中</p>		
+	</div>
+	<script>
+		
+	</script>
+</body>
+</html>

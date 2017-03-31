@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.banner img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.intro{
+	margin-top: 10px;
+	background: #fff;
+}
+.intro tr td{
+	padding:20px 15px;
+	color: #979797;
+	font-size: 16px;
+	border-bottom: #eee solid 1px;
+	line-height: 28px;
+}
+.intro tr td:nth-child(1){
+	color: #444;
+	text-align: center;
+}
+.mui-btn-block.mui-btn-red{
+	padding: 10px 0;
+	background-color:#ff5f5f
+}
+
+.notice p{
+	text-indent: 2em;
+}
+.notice .title{
+	color: #444;
+	text-indent: inherit;
+}
+.mui-input-group{
+	padding-top: 20px;
+}
+.mui-input-group:before,.mui-input-group:after,.mui-input-group .mui-input-row:after{
+	background-color: #fff;
+}
+.mui-input-group .mui-input-row{
+	background-color: #f5f3f3;
+	margin:0 30px 15px 30px;
+	border-radius: 8px;
+}
+.mui-input-row label{
+	width: 20%;
+	padding: 8px 15px;
+}
+
+.mui-input-row label~input{
+	width: 80%;
+}
+.submit{
+	margin: 0 30px;
+}
+.mui-input-group .mui-btn-blue{
+	background-color: #4fce85;
+	border-color: #4fce85;
+	padding: 10px 0;
+}
+#showCityPicker{
+	float: none;
+    width: 80%;
+    border: none;
+    background: none;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

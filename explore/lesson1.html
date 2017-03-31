@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="../css/indexstyle.css" rel="stylesheet"/>
+    <link href="css/lesson1.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<div class="mui-inner-wrap">
+		<!--video src="vedio/sxdcq.mp4" width="1" height="1" controls="controls"></video-->
+		<div class="vedioplayer">
+			<img src="images/vedio.jpg" class="vediopic">
+		</div>
+		<div class="mui-segmented-control">
+		    <a class="mui-control-item mui-active" href="#item1">内容介绍</a>
+		    <a class="mui-control-item" href="#item2">评论</a>
+		</div>
+		<div class="intro">
+			<h3>原理</h3>
+			<p>齿轮常用在机械中传递动力和能量，还能改变转速、转向。当大齿轮带动小齿轮时，小齿轮的转速会加快，但力量会减小；而当小齿轮带动大齿轮时，大齿轮的转速会减小，但力量会增大、适当地安排齿轮可以方便工作。</p>
+			<h3>概述</h3>
+			<p>齿轮传动是利用两齿轮的齿轮相互啮合传动动力和运动的机械传动。按齿轮轴线的相对位置分平行轴圆柱齿轮传动、相交轴圆锥齿轮传动和交错轴螺旋齿轮传动。具有结构紧凑、效率高、寿命长等特点。       齿轮传动是指用主、从动轮轮齿直接、传递运动和动力的装置。   在所有的机械传动中，齿轮传动应用最广，可用来传递相对位置不远的两轴之间的运动和动力。</p>
+		</div>
+		<div class="comment">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/peo.gif">
+			            <div class="mui-media-body">
+			                幸福<span class="time">2016.12.20</span>
+			                <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/peo.gif">
+			            <div class="mui-media-body">
+			                木屋
+			                <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/peo.gif">
+			            <div class="mui-media-body">
+			                CBD
+			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			<form class="mui-input-group">
+			    <div class="mui-input-row">
+			        <input type="text" class="mui-input-clear" placeholder="请输入您的评论">			        
+			    </div>
+			    <button type="button" class="mui-btn">提交</button>
+			</form>
+		</div>
+	</div>
+	<script>
+		mui('.mui-segmented-control').on('tap','a',function(){
+			if($(this).index() == 0){
+				$('.intro').show();
+				$('.comment').hide();
+			}else{
+				$('.intro').hide();
+				$('.comment').show();
+			}
+		})
+		
+	</script>
+</body>
+</html>

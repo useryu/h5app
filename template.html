@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <style>
+    	
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		swipeBack:true
+      	});
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title" id="title"></h1>
+		</header>
+				
+	</div>
+	<script>
+		/*
+		var titleElem = document.getElementById("title");
+		var contentWebview = null,self = null;
+		
+		mui.plusReady(function () {
+		    self = plus.webview.currentWebview();
+		});
+		
+		// 自定义事件接收参数修改模板父页面头部
+		window.addEventListener("updateHeader", function(e) {
+		    var title = e.detail.title;
+		    var href = e.detail.target;
+		    var aniShow = e.detail.aniShow;
+		
+		    titleElem.innerHTML = title;
+		    titleElem.className = "mui-title mui-fadein";
+		
+		    if(mui.os.android&&aniShow&&parseFloat(mui.os.version)>=4.4){
+		        if(contentWebview==null){
+		            contentWebview = self.children()[0];
+		        }
+		        if (contentWebview.getURL() != href) {
+		            contentWebview.loadURL(href);
+		        } else {
+		            contentWebview.show();
+		        }
+		        setTimeout(function () {
+		            self.show(aniShow);
+		        },10);
+		    }
+		});
+		*/
+		// 返回事件（隐藏模板父页面，并在窗体动画结束后，隐藏共用子页面）
+		var self,contentWebview=null;
+		var titleElem = document.getElementById("title");
+		mui.plusReady(function () {
+		    self = plus.webview.currentWebview();
+		    
+		});
+		mui.back = function() {
+		    self.hide('auto');
+		    setTimeout(function() {
+		        self.children()[0].hide('none');
+		        self.children()[0].loadURL('loading.html');
+		    }, 350);
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="../css/indexstyle.css" rel="stylesheet"/>
+    <link href="css/active.css" rel="stylesheet"/>
+    
+</head>
+<body style="background: #fff;">
+	<div class="mui-inner-wrap">
+		<div class="mui-content" style="padding: 30px 15px 0 15px;background: #fff;">
+			<div class="page-title">
+			    <h3>区科技馆“小小科学家素质养成”2015年暑期公益培训开课公告</h3>
+			    <p>来源：宝安科技馆 发布日期：2015-07-13</p>
+		    </div>
+		    <div class="page-content">
+		    	<p>终于迎来2015年缤纷暑假，“小小科学家素质养成”暑期公益培
+训即将开课啦！今年，宝安区科技馆重磅推出了一系列超级好玩
+的免费课程，想不想变身为科技小达人？还不快来武装你的小长
+假！从7月14日到8月14日，精彩不断，定期开课，欢迎有兴趣的
+同学们踊跃报名哦。</p>
+				<p>
+					一、报名须知<br>
+（一）报名对象：凡持有效身份证并符合课程限龄的青少年儿童<br>
+均可报名。<br>
+（二）报名时间：<br>
+1、7月7日-7月10日（16:00准时截止）；<br>
+2、名额有限，先到先得，额满为止。<br>
+				</p>
+				<p>
+					二、课程安排<br>
+本次暑期公益培训共有四大类课程，分别为天文公益课、科学魔
+法课堂、少年创客培训班和机器人训练营，欢迎大家根据兴趣选
+				</p>
+				<a href="#" class="signup"><button type="button" class="mui-btn mui-btn-red mui-btn-block" data-href='signup.html' data-title="在线报名">在线报名</button></a>
+		    </div>
+		</div>
+		
+	</div>
+	<script>
+		mui.init()
+		/************页面跳转****************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("../template.html");
+			subWebview = plus.webview.create("../loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.signup').on('tap','button',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})
+	</script>
+</body>
+</html>

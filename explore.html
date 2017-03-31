@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <style>
+    	.mui-table-view a{
+    		background: #fff;    		
+    		border-radius: 46px;
+    		display: inline-block;
+    	}
+    	.mui-table-view a .mui-icon{
+    		color: #2f95f4;
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">
+		<ul class="mui-table-view mui-grid-view mui-grid-9" style="padding-top: 30px;">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a data-href="explore/dynamics.html" data-title="力学">
+			        <span class="mui-icon mui-icon-home"></span>
+			        <div class="mui-media-body">力学</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="声学">
+			        <span class="mui-icon mui-icon-email"></span>
+			        <div class="mui-media-body">声学</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="电磁学">
+			        <span class="mui-icon mui-icon-chatbubble"></span>
+			        <div class="mui-media-body">电磁学</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="光学">
+			        <span class="mui-icon mui-icon-location"></span>
+			        <div class="mui-media-body">光学</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="教学和逻辑">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">教学和逻辑</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="天文地理">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">天文地理</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" data-title="人体科学">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">人体科学</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3">
+			    <a href="#" style="padding: 30px 0;" data-title="其他">
+			        <div class="mui-media-body">其他</div>
+			    </a>
+			</li>
+		</ul>
+		
+				
+	</div>
+	<script>
+		/************页面跳转******************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("template.html");
+			subWebview = plus.webview.create("loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.mui-table-view').on('tap','li a',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})
+		
+		/*************重写mui.back*********/
+		var first = null;
+		mui.back = function() {
+			if(!first) {
+				first = new Date().getTime();
+				/**
+				* 自动消失提示信息
+				* http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.toast
+				*/
+				plus.nativeUI.toast("再按一次退出应用");
+				setTimeout(function() {
+					first = null;
+				}, 1000);
+			} else {
+				if(new Date().getTime() - first < 1000) {
+				/**
+				* 退出应用，仅安卓有效；
+				* http://www.html5plus.org/doc/zh_cn/runtime.html#plus.runtime.quit
+				*/
+					plus.runtime.quit();
+				}
+			}
+		};
+	</script>
+</body>
+</html>

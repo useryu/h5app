@@ -1,0 +1,406 @@
+{
+  "guide.html": {
+    "href": "guide.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/swiper.min.css",
+      "css/animate.min.css",
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "js/swiper.min.js",
+      "js/swiper.animate1.0.2.min.js",
+      "css/guidestyle.css",
+      "images/pic1.png",
+      "images/pic2.png",
+      "images/pic3.png",
+      "images/pic4.png",
+      "images/word1.png",
+      "images/word2.png",
+      "images/word3.png",
+      "images/word4.png"
+    ],
+    "refer": [
+      "enter.html"
+    ],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "images/4.jpg",
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/film.png",
+      "js/jquery.min.js"
+    ],
+    "refer": [
+      "guide.html",
+      "enter.html"
+    ],
+    "priority": 0
+  },
+  "seting/set.html": {
+    "href": "seting/set.html",
+    "resources": [
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "seting/js/mui.view.js",
+      "seting/js/feedback.js",
+      "seting/images/peo.gif",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "seting/css/set.css",
+      "seting/css/feedback.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "loading.html": {
+    "href": "loading.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "template.html": {
+    "href": "template.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css"
+    ],
+    "refer": [
+      "loading.html"
+    ],
+    "priority": 0
+  },
+  "help/help1.html": {
+    "href": "help/help1.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "help/css/help.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "help/help2.html": {
+    "href": "help/help2.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "help/css/help.css",
+      "help/images/map.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "help/help3.html": {
+    "href": "help/help3.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "help/css/help.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "help.html": {
+    "href": "help.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "images/helpbanner.jpg"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "help/help1.html",
+      "help/help2.html",
+      "help/help3.html"
+    ],
+    "priority": 0
+  },
+  "explore/lesson1.html": {
+    "href": "explore/lesson1.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "explore/css/lesson1.css",
+      "explore/images/vedio.jpg",
+      "explore/images/peo.gif"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "explore/dynamics.html": {
+    "href": "explore/dynamics.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "explore/images/img1.jpg"
+    ],
+    "refer": [
+      "loading.html",
+      "template.html",
+      "explore/lesson1.html"
+    ],
+    "priority": 0
+  },
+  "explore.html": {
+    "href": "explore.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "explore/dynamics.html"
+    ],
+    "priority": 0
+  },
+  "movie/signup.html": {
+    "href": "movie/signup.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "movie/css/movie.css",
+      "css/mui.picker.min.css",
+      "css/mui.poppicker.css",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "movie/movie1.html": {
+    "href": "movie/movie1.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "movie/css/movie.css",
+      "movie/images/movie1.jpg"
+    ],
+    "refer": [
+      "loading.html",
+      "template.html",
+      "movie/signup.html"
+    ],
+    "priority": 0
+  },
+  "movie.html": {
+    "href": "movie.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css",
+      "images/mbanner.jpg",
+      "images/img5.jpg",
+      "images/img6.jpg"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "movie/movie1.html"
+    ],
+    "priority": 0
+  },
+  "active/signup.html": {
+    "href": "active/signup.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "active/active1.html": {
+    "href": "active/active1.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css"
+    ],
+    "refer": [
+      "loading.html",
+      "template.html",
+      "active/signup.html"
+    ],
+    "priority": 0
+  },
+  "acitve.html": {
+    "href": "acitve.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css",
+      "images/img3.jpg",
+      "images/img4.jpg"
+    ],
+    "refer": [
+      "active/active1.html"
+    ],
+    "priority": 0
+  },
+  "apprecate/apprecate1.html": {
+    "href": "apprecate/apprecate1.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "apprecate/css/apprecate.css",
+      "apprecate/images/banner.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "apprecate.html": {
+    "href": "apprecate.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css",
+      "images/img3.jpg",
+      "images/img4.jpg"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "apprecate/apprecate1.html"
+    ],
+    "priority": 0
+  },
+  "visit.html": {
+    "href": "visit.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "science.html": {
+    "href": "science.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "help/css/help.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "list.html": {
+    "href": "list.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "images/4.jpg",
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/film.png"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "movie.html",
+      "acitve.html",
+      "apprecate.html",
+      "visit.html",
+      "science.html"
+    ],
+    "priority": 0
+  },
+  "activedex.html": {
+    "href": "activedex.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css",
+      "active/css/active.css",
+      "images/banner.jpg",
+      "images/img1.jpg",
+      "images/img2.jpg"
+    ],
+    "refer": [
+      "template.html",
+      "loading.html",
+      "active/active1.html"
+    ],
+    "priority": 0
+  },
+  "enter.html": {
+    "href": "enter.html",
+    "resources": [
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/mui-icons-extra.css",
+      "css/indexstyle.css"
+    ],
+    "refer": [
+      "seting/set.html",
+      "help.html",
+      "explore.html",
+      "list.html",
+      "activedex.html"
+    ],
+    "priority": 0
+  }
+}

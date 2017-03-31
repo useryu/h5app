@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <link href="active/css/active.css" rel="stylesheet"/>
+    <style>
+    	.contentlist .mui-table-view .mui-table-view-cell .mui-media-body font{
+    		width: 80%;
+    	}
+    	.mui-table-view .mui-media-body{
+    		position: relative;
+    	}
+    	.mui-btn{
+    		font-size: 12px;
+    		padding: 0;
+    		border-radius: 10px;
+    		padding: 4px;
+    		border: none;
+    		width: 56px;
+    		text-align: center;
+    	}
+    	.mui-btn-red{
+    		background-color:#46c387 ;
+    	}
+    	.moiveinfo{
+    		display: none;
+    	}
+    	.moiveinfo{
+    		padding-top: 10px;
+    	}
+    	.moiveinfo .info{
+    		background: #fff;
+    		padding: 20px 15px;
+    		margin-bottom: 10px;
+    	}
+    	.moiveinfo .info h3{
+    		text-align: center;
+    		font-size: 18px;
+    		color: #444;
+    		padding-bottom: 20px;
+    		font-weight: normal;
+    	}
+    	.moiveinfo .info p{
+    		font-size: 14px;
+    		line-height: 26px;
+    		text-align: justify;
+    		text-indent: 2em;
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">
+		<div class="mui-content">
+			<div class="banner"><img src="images/mbanner.jpg"></div>
+		    <div class="mui-segmented-control">
+		        <a class="mui-control-item mui-active" href="#item1"><span class="mui-icon mui-icon-extra mui-icon-extra-regist"></span><font>影讯排期</font></a>
+		        <a class="mui-control-item" href="#item2"><span class="mui-icon mui-icon mui-icon-videocam"></span><font>科学影城</font></a>		        
+		    </div>
+		    <div class="contentlist">
+			    <ul class="mui-table-view">
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;" data-href="movie/movie1.html" data-title="科技改变未来">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">			        
+			                    <font class="mui-ellipsis">回到未来荒野秘史回到未来荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>  
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img5.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">荒野秘史</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-blue">球幕影院</button>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media">
+			            <a href="javascript:;">
+			                <img class="mui-media-object mui-pull-left" src="images/img6.jpg">
+			                <div class="mui-media-body">
+			                    <font class="mui-ellipsis">回到未来</font>
+			                    <p class="mui-ellipsis">2016.12.20 — 2017.01.07</p>
+			                </div>
+			                <button type="button" class="mui-btn mui-btn-red">4D影院</button>
+			            </a>
+			        </li>
+			    </ul>
+		    </div>
+		    
+		    <div class="moiveinfo">
+		    	<div class="info">
+		    		<h3>球幕影院简介</h3>
+		    		<p>球幕影院内部球幕直径15米，共设有105个座位，放映系统包括球幕电影播放系统和Digstar5数字天象系统和JBL音响系统。目前投入使用的Digstar5系统，其巨型球幕的放映，高精密数码图像可以准确地再现宇宙空间的景观，画面清晰稳定，结合影院内7+1声道的多重音响系统，观众仰卧观看，感觉为画面所包容，使人仿佛置身于浩瀚的茫茫宇宙中，气势恢弘，场面壮观，极具震撼力。</p>
+		    	</div>
+		    	<div class="info">
+		    		<h3>4D影城简介</h3>
+		    		<p>4D影院是从传统的3D影院基础上发展而来，相比较于其他类型影院，具有主题突、科技含量高、效果逼真、画面冲击性强等特点和优势。人们不仅将震动、坠落、吹风、喷水、挠痒、扫</p>
+		    	</div>
+		    </div>
+		</div>
+	<script>
+		/************页面跳转******************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("template.html");
+			subWebview = plus.webview.create("loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.mui-table-view').on('tap','li a',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		});
+		
+		
+		mui('.mui-segmented-control').on('tap','a',function(){
+			if($(this).index() == 0){
+				$('.contentlist').show();
+				$('.moiveinfo').hide();
+			}else{
+				$('.contentlist').hide();
+				$('.moiveinfo').show();
+			}
+		})
+		
+	</script>
+</body>
+</html>

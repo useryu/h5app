@@ -1,0 +1,117 @@
+@charset "utf-8";
+body,html{
+	height: 100%;
+}
+.mui-content{
+	height: 100%;
+	overflow: hidden;
+}
+ .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#jump{
+	position: absolute;
+    z-index: 999;
+    right: 8px;
+    top: 8px;
+    color: #c8c7c7;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.swipercon{
+	width: 90%;
+	margin-top: -36px;
+}
+.img-reponse{
+	display: inline-block;
+	max-width: 65%;
+	height: auto;
+	margin: 20px 0;
+}
+
+.swipercon p{
+	font-size: 12px;
+	line-height: 28px;
+	color: #9e9e9e;
+}
+.column img{
+	max-width: 25%;
+	height: auto;
+}
+.swipercon .mui-btn{
+	font-size: 20px;
+    padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    background: -webkit-radial-gradient(#553ff9, #7159fa); /* Safari 5.1 - 6.0 */
+	background: -o-radial-gradient(#553ff9, #7159fa); /* Opera 11.1 - 12.0 */
+	background: -moz-radial-gradient(#553ff9, #7159fa); /* Firefox 3.6 - 15 */
+	background: radial-gradient(#553ff9, #7159fa); /* 标准的语法 */
+}
+
+.swipercon .ani a{
+	text-decoration: underline;
+	font-size: 14px;
+	display: inline-block;
+	margin-top: 6px;
+	color: #c8c7c7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

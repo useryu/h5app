@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="../css/indexstyle.css" rel="stylesheet"/>
+    <style>
+    	.mui-table-view.mui-grid-view .mui-table-view-cell{
+    		margin-bottom: 30px;
+    	}
+    	.mui-table-view.mui-grid-view .mui-table-view-cell a .mui-media-object{
+    		border-radius: 20px;
+    	}
+    	.mui-table-view.mui-grid-view .mui-table-view-cell a .mui-media-body{
+    		color: #979797;
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    
+</head>
+<body style="background: #fff;">
+	<div class="mui-inner-wrap">
+		<ul class="mui-table-view mui-grid-view" style="padding-top: 30px;">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#" data-href="lesson1.html" data-title="椎体上滚">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">椎体上滚</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明2</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object"  src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明1</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明2</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明1</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明2</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明1</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="images/img1.jpg">
+		            <div class="mui-media-body">文字说明2</div>
+		        </a>
+		    </li>
+		</ul>
+				
+	</div>
+	<script>
+		/************页面跳转******************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("../template.html");
+			subWebview = plus.webview.create("../loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.mui-table-view').on('tap','li a',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})
+	</script>
+</body>
+</html>

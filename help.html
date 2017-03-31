@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <style>
+    	.banner img{
+    		width: 100%;
+    		display: block;
+    		height: auto;
+    	}
+    	.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(1){   		
+    		background: -webkit-linear-gradient(45deg, #f56b25, #fed261); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(45deg, #f56b25, #fed261); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(45deg, #f56b25, #fed261); /* Firefox 3.6 - 15 */
+			background: linear-gradient(45deg, #f56b25, #fed261); /* 标准的语法 */
+    	}
+    	.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(2){   		
+    		background: -webkit-linear-gradient(45deg, #6943db, #cd92fb); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(45deg, #6943db, #cd92fb); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(45deg, #6943db, #cd92fb); /* Firefox 3.6 - 15 */
+			background: linear-gradient(45deg, #6943db, #cd92fb); /* 标准的语法 */
+    	}
+    	.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(3){   		
+    		background: -webkit-linear-gradient(45deg, #2f90ec, #71f0fd); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(45deg, #2f90ec, #71f0fd); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(45deg, #2f90ec, #71f0fd); /* Firefox 3.6 - 15 */
+			background: linear-gradient(45deg, #2f90ec, #71f0fd); /* 标准的语法 */
+    	}
+    	.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(4){   		
+    		background: -webkit-linear-gradient(45deg, #0dad9a, #2df6f4); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(45deg, #0dad9a, #2df6f4); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(45deg, #0dad9a, #2df6f4); /* Firefox 3.6 - 15 */
+			background: linear-gradient(45deg, #0dad9a, #2df6f4); /* 标准的语法 */
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		swipeBack:true
+      	});
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">
+		<div class="banner">
+			<img src="images/helpbanner.jpg" />
+		</div>
+		<section class="menulist">
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-href="help/help1.html" data-title="参观须知">
+				        <span class="mui-icon mui-icon-extra mui-icon-extra-order"></span>
+				        <div class="mui-media-body">参观须知</div>
+				        
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a id="apprecate" data-href="help/help2.html" data-title="交通指南">
+				        <span class="mui-icon mui-icon-location"></span>
+				        <div class="mui-media-body">交通指南</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-title="小游戏">
+				        <span class="mui-icon mui-icon-extra mui-icon-extra-grech"></span>
+				        <div class="mui-media-body">小游戏</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-href="help/help3.html" data-title="联系我们">
+				        <span class="mui-icon mui-icon-phone"></span>
+				        <div class="mui-media-body">联系我们</div>
+				    </a>
+				</li>
+				
+			</ul>	
+				
+	</div>
+	<script>
+		/************页面跳转****************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("template.html");
+			subWebview = plus.webview.create("loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.mui-table-view').on('tap','li a',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})
+		/*************重写mui.back*********/
+		var first = null;
+		mui.back = function() {
+			if(!first) {
+				first = new Date().getTime();
+				/**
+				* 自动消失提示信息
+				* http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.toast
+				*/
+				plus.nativeUI.toast("再按一次退出应用");
+				setTimeout(function() {
+					first = null;
+				}, 1000);
+			} else {
+				if(new Date().getTime() - first < 1000) {
+				/**
+				* 退出应用，仅安卓有效；
+				* http://www.html5plus.org/doc/zh_cn/runtime.html#plus.runtime.quit
+				*/
+					plus.runtime.quit();
+				}
+			}
+		};
+	</script>
+</body>
+</html>

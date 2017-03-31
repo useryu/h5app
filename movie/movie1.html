@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="../css/indexstyle.css" rel="stylesheet"/>
+    <link href="css/movie.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<div class="mui-inner-wrap">
+		<div class="banner"><img src="images/movie1.jpg" /></div>
+		<div class="intro">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td width="30%">片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+						<td>《荒城秘史》</td>
+					</tr>
+					<tr>
+						<td>放映时间</td>
+						<td>2016.12.17-2016.12.30</td>
+					</tr>
+					<tr>
+						<td>影厅安排</td>
+						<td>球幕影厅</td>
+					</tr>
+					<tr>
+						<td>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介</td>
+						<td>一座城堡的诞生到荒废，《荒城秘史》，带你揭秘神秘的古城堡不为人知的历史！</td>
+					</tr>
+					<tr>
+						<td>观影须知</td>
+						<td>票价30元每人，身高1.2米以下儿童免费；售票方式为在线预约，现场缴费</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<a href="#" class="signup"><button type="button" class="mui-btn mui-btn-red mui-btn-block" data-href='signup.html' data-title="在线预约">在线预约</button></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script>
+		mui.init()
+		/************页面跳转****************/
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("../template.html");
+			subWebview = plus.webview.create("../loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.signup').on('tap','button',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			if(!this.getAttribute('data-href')){ return ; }
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})
+	</script>
+</body>
+</html>

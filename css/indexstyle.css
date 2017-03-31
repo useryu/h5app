@@ -1,0 +1,140 @@
+@charset "utf-8";
+html,body
+{
+    font-family: "microsoft yahei";
+}
+header.mui-bar{
+	background: #2f9afe;
+	height: 45px;
+}
+.mui-title{
+	font-size: 17px;
+	color: #fff;
+}
+.mui-bar-nav .mui-icon.mui-icon-contact{
+	color: #fff;
+	font-size: 26px;
+}
+
+nav.mui-bar-tab{
+	background: #2f9afe;
+}
+.mui-bar-tab .mui-tab-item{
+	color: #fff;
+}
+.mui-bar-nav{
+	box-shadow: none;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color: #979797;
+	background: #fff;	
+}
+
+
+#slider .mui-slider-indicator .mui-indicator{
+	box-shadow: none;
+	background: #ccfcfd;
+	width: 10px;
+	height: 10px;
+	margin: 1px 2px;
+}
+
+#slider .mui-slider-indicator .mui-indicator.mui-active{
+	width: 26px;
+	background: #26a8f5;
+	border-radius: 10px;
+}
+
+.newshort .mui-table-view-cell h3{
+	font-size: 16px;
+	font-weight: normal;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.newshort .mui-table-view-cell p{
+	font-size: 12px;
+}
+.menulist{
+	padding-top: 20px;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(1){
+	background: url(../images/icon1.jpg) no-repeat;
+	background-size: cover;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(2){
+	background: url(../images/icon2.jpg) no-repeat;
+	background-size: cover;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(3){
+	background: url(../images/icon3.jpg) no-repeat;
+	background-size: cover;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-media:nth-child(4){
+	background: url(../images/icon4.jpg) no-repeat;
+	background-size: cover;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-media,.menulist .mui-grid-view.mui-grid-9 .mui-media .mui-media-body{
+	color: #fff;
+}
+
+.menulist .mui-grid-view.mui-grid-9 .mui-table-view-cell>a:not(.mui-btn){
+	padding: 26px 0;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-table-view-cell{
+	border-right: 10px solid #eee;
+    border-bottom: 10px solid #eee;
+}
+.menulist .mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(1),.menulist .mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(3){
+	border-left: 10px solid #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

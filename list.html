@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui-icons-extra.css" rel="stylesheet"/>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		swipeBack:true
+      	});
+    </script>
+</head>
+<body>
+	<div class="mui-inner-wrap">		
+		<div id="slider" class="mui-slider">
+		  <div class="mui-slider-group mui-slider-loop">
+		    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="images/4.jpg">
+		      </a>
+		    </div>
+		    <!-- 第一张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="images/1.jpg">
+		      </a>
+		    </div>
+		    <!-- 第二张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img  src="images/2.jpg">
+		      </a>
+		    </div>
+		    <!-- 第三张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="images/3.jpg">
+		      </a>
+		    </div>
+		    <!-- 第四张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="images/4.jpg">
+		      </a>
+		    </div>
+		    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="images/1.jpg">
+		      </a>
+		    </div>
+		  </div>
+		  <div class="mui-slider-indicator">
+		    <div class="mui-indicator mui-active"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		  </div>
+		</div>
+		
+		<section class="newshort">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;" data-href="movie.html" data-title="影讯">
+			            <img class="mui-media-object mui-pull-left" src="images/film.png">
+			            <div class="mui-media-body">
+			                <h3>《荒城秘史》，带你解密神秘的古老荒城</h3>
+			                <p class="mui-ellipsis">片长：120分钟     排期：2016.12.17-2016.12.20</p>
+			            </div>
+			        </a>
+			    </li>		    
+			</ul>
+		</section>
+		
+		<section class="menulist">
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-href="acitve.html" data-title="活动预约">
+				        <span class="mui-icon mui-icon-chatboxes"><span class="mui-badge mui-badge-red">4</span></span>
+				        <div class="mui-media-body">活动预约</div>
+				        
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a id="apprecate" data-href="apprecate.html" data-title="科技赏析">
+				        <span class="mui-icon mui-icon-search"></span>
+				        <div class="mui-media-body">科技赏析</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-href="visit.html" data-title="参观导览">
+				        <span class="mui-icon mui-icon-map"></span>
+				        <div class="mui-media-body">参观导览</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+				    <a data-href="science.html" data-title="走进科技馆">
+				        <span class="mui-icon mui-icon-extra mui-icon-extra-hotel"></span>
+				        <div class="mui-media-body">走进科技馆</div>
+				    </a>
+				</li>
+				
+			</ul>
+		</section>
+		
+		
+	</div>
+	<script>
+		
+		
+		var template;
+		mui.plusReady(function(){
+			template = plus.webview.create("template.html");
+			subWebview = plus.webview.create("loading.html","",{top:"45px",bottom:"0px"});
+			template.append(subWebview);
+		})
+
+		mui('.mui-table-view').on('tap','li a',function(){
+			var title = this.getAttribute('data-title');
+			template.evalJS("with(document.getElementById('title')){innerHTML='" + title + "'};");
+			template.show("slide-in-right",200);
+			subWebview.loadURL(this.getAttribute('data-href'));
+			template.append(subWebview);
+			subWebview.show('none');
+		})		
+	</script>
+</body>
+</html>
